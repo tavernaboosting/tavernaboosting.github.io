@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>TavernaBoosting | League of Legends Boosts</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <link rel="icon" type="image/png" href="/images/DeWatermark.ai_1718216497354__1_-removebg-preview (2).png">
+    <script defer src='script.js'></script>
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo">Taverna</a>
+        <nav class="navbar">
+            <a class="j1" href="./index.html">Home</a>
+            <a class="j2" href="./boosting.html">Boosting</a>
+            <a class="j3" href="https://www.twitch.tv/franktheceo">Twitch</a>
+            <a class="j4" href="https://discord.gg/6qUg4tDJTc">Join Our Discord</a>
+        </nav>
+    </header>
+
+    <h1 class="h11" style="margin-top: 100px;">League of Legends Boosts</h1><br>
+    <div class="line" style="height: 10px; width: 440px; display: flex; align-items: center; margin: auto; margin-top: 5px;"></div>
+    
+    <div style="margin-bottom: 75px;" class="boost">
+        <h1 style="padding: 40px; font-size: 25px;">What region is your account in?</h1>
+        <h1 style="float: right; font-size: 25px; margin-top: -72px; margin-right: 190px;">Select Your Rank</h1>
+        <div style="margin-left: 40px">
+            <button class="button" onclick="setRegion('EUW')">EUW</button>
+            <button class="button" onclick="setRegion('EUNE')">EUNE</button>
+            <button class="button" onclick="setRegion('TR')">TR</button>
+            <button class="button" onclick="setRegion('KR')">KR</button>
+            <button class="button" onclick="setRegion('RU')">RU</button><br><br><br><br>
+            
+            <h1 style="font-size: 25px; margin-top: 50px;">Select Your Preferences</h1>
+            <img id="rankImage1" src="/images/Season_2023_-_Diamond.png" style="display: flex; position: absolute; width: 125px; height: auto; margin-top: 170px; margin-left: 660px; opacity: 0;">
+            <img id="rankImage" src="/images/Season_2023_-_Diamond.png" style="display: flex; margin: auto; width: 125px; height: auto; margin-top: -100px; margin-right: 175px; opacity: 0;">
+            
+            <p>
+                <label for="priority">Priority<span class="blue"> +25%</span></label>
+                <label class="switch" style="margin-left: 135px">
+                    <input type="checkbox" id="priority" name="priority" onchange="calculatePrice();">
+                    <span class="slider round"></span>
+                </label>
+            </p>
+            
+            <p>
+                <label for="champions">Champions selection<span class="blue"> +10%</span></label>
+                <label class="switch" style="margin-left: 44px">
+                    <input type="checkbox" id="champions" name="champions" onchange="calculatePrice();">
+                    <span class="slider round"></span>
+                </label>
+            </p>
+            
+            <p>
+                <label for="role">Role selection<span class="blue"> +10%</span></label>
+                <label class="switch" style="margin-left: 93px">
+                    <input type="checkbox" id="role" name="role" onchange="calculatePrice();">
+                    <span class="slider round"></span>
+                </label>
+            </p>
+            
+            <p>
+                <label for="offline">Offline mode<span class="blue"> FREE</span></label>
+                <label class="switch" style="margin-left: 95px">
+                    <input type="checkbox" id="offline" name="offline" onchange="calculatePrice();">
+                    <span class="slider round"></span>
+                </label>
+            </p>
+            
+            <p>
+                <label for="flash">Flash key change<span class="blue"> FREE</span></label>
+                <label class="switch" style="margin-left: 67px;">
+                    <input type="checkbox" id="flash" name="flash" onchange="calculatePrice();">
+                    <span class="slider round"></span>
+                </label>
+            </p><br>
+
+            <div style="float: right; margin-right: 170px; margin-top: -370px;">
+                <label for="rank">Choose your rank:</label>
+                <select name="rank" id="rank" onchange="changeRankImage(); calculatePrice();">
+                    <option value="" selected disabled hidden>Choose...</option>
+                    <option value="Iron">Iron</option>
+                    <option value="Bronze">Bronze</option>
+                    <option value="Gold">Gold</option>
+                    <option value="platinum">Platinum</option>
+                    <option value="Emerald">Emerald</option>
+                    <option value="Diamond">Diamond</option>
+                </select>
+            </div>
+
+            <h1 style="margin-left: 576px; margin-top: -150px; font-size: 25px;">Choose your desired rank:</h1>
+            <div style="float: right; margin-right: 116px; margin-top: -100px;">
+                <label for="rank1">Choose your desired rank:</label>
+                <select name="rank1" id="rank1" onchange="changeRankImage1(); calculatePrice();">
+                    <option value="" selected disabled hidden>Choose...</option>
+                    <option value="Iron">Iron</option>
+                    <option value="Bronze">Bronze</option>
+                    <option value="Gold">Gold</option>
+                    <option value="Platinum">Platinum</option>
+                    <option value="Emerald">Emerald</option>
+                    <option value="Diamond">Diamond</option>
+                </select>
+            </div>
+
+            <div style="float: right; margin-right: 190px; margin-top: -340px;">
+                <label for="division">Choose your division:</label>
+                <select name="division" id="division" onchange="calculatePrice();">
+                    <option value="4">IV</option>
+                    <option value="3">III</option>
+                    <option value="2">II</option>
+                    <option value="1">I</option>
+                </select>
+            </div>
+
+            <div style="float: right; margin-right: 140px; margin-top: -70px;">
+                <label for="desdiv">Choose your desired division:</label>
+                <select name="desdiv" id="desdiv" onchange="calculatePrice();">
+                    <option value="4">IV</option>
+                    <option value="3">III</option>
+                    <option value="2">II</option>
+                    <option value="1">I</option>
+                </select>
+            </div>  
+
+            <button id="priceButton" onclick="generateOrder()">Show Price</button>
+        </div>
+    </div>
+
+
+</body>
+</html>

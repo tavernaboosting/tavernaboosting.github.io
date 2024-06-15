@@ -1,0 +1,465 @@
+@font-face {
+    font-family: myFont1;
+    src: url(fonts/ovb.ttf);
+}
+
+@font-face {
+    font-family: myFont2;
+    src: url(fonts/Poppins-Black.ttf);
+}
+
+
+.h11 {
+    font-family: myFont1;
+    text-align: center;
+    margin-top: 65px;
+    font-size: 37px;
+    color: white;
+    margin-bottom: -15px;
+}
+
+* {
+
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+
+    width: 100%;
+    background-color: rgb(46, 47, 53);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.boxes {
+    color: white;
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 75px auto;
+    text-align: center;
+}
+
+
+.card {
+
+    width: 100%;
+    height: 225px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px 20px;
+    padding: 20px 20px;
+    background-color: #a6aef327;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+    user-select: none;
+   
+}
+
+.card .icon {
+
+    font-size: 35px;
+    margin-bottom: 10px;
+
+}
+
+.card h2 {
+
+    font-size: 25px;
+    font-family: myFont1;
+    margin-bottom: 15px;
+}
+
+.card p {
+
+    font-size: 16px;
+    font-family: myFont1;
+}
+
+.p11 {
+
+    font-size: 22px;
+    font-family: myFont1; 
+    text-align: center;
+    padding-top: 30px;
+    color: rgba(255, 255, 255, 0.555);
+}
+
+.boosteu {
+
+    background: -webkit-linear-gradient(#5271ff, #da4dda);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 45px;
+}
+
+.card:hover {
+
+    background-color: #6572eb27;
+    transition: 0.3s ease-in-out;
+    user-select: none;
+    
+    .button {
+
+        background-color:  rgb(87, 103, 139);
+    }
+    
+}
+
+
+.navbar a {
+
+    color: white;
+    font-weight: 100;
+    text-decoration: none;
+    margin-left: 25px;
+    -webkit-transition: color 0.3s ease-out;
+    -moz-transition: color 0.3s ease-out;
+    -o-transition: color 0.3s ease-out;
+    transition: color 0.3s ease-out;
+    user-select: none;
+    font-family: myFont1;
+    font-weight: 300;
+  }
+
+  .navbar a:hover {
+
+    
+    color: rgb(92, 102, 177);
+    cursor: pointer
+    
+  }
+
+
+.logo {
+
+  font-size: 20px;
+  color:white;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: myFont1;
+  background: -webkit-linear-gradient(#5271ff, #da4dda);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+}
+
+.header {
+    justify-content: space-between;
+    display: flex;
+    font-family: myFont3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    align-items: center;
+    z-index: 100;
+    background-color: rgb(37, 37, 37);
+  }
+
+  .lookfor {
+
+    float: left;
+    margin-left: 120px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: myFont1;
+    color: white;
+    font-size: 37px;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+.levelup {
+
+    font-size: 60px;
+    color: white;
+    font-family: myFont1;
+    margin-left: 110px;
+    font-weight: 500;
+}
+
+.levelup1 {
+
+    font-size: 20px;
+    color: white;
+    font-family: myFont1;
+    margin-left: 110px;
+    padding-bottom: 100px;
+    font-weight: 500;
+    width: 600px;
+}
+
+
+.span11 {
+
+    background: -webkit-linear-gradient(#143cee, #da4dda);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: myFont2;
+    font-weight: 100;
+}
+
+.div {
+min-height: 100vh;
+    background: url(images/sitebackground.png) no-repeat;
+    background-size: cover;
+
+}
+
+.alttext {
+
+    float: right;
+    margin-right: 85px;
+}
+
+.alttitle {
+
+    font-size: 60px;
+    color: white;
+    font-family: myFont1;
+    font-weight: 500;
+    width: 700px;
+    margin-left: 600px;
+}
+
+.altp {
+
+    font-size: 20px;
+    color: white;
+    font-family: myFont1;
+    width: 700px;
+    margin-left: 10px;
+    margin-left: 600px;
+    width: 700px;
+}
+
+.customers {
+
+    background: -webkit-linear-gradient(#143cee, #da4dda);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: myFont2;
+    font-weight: 100;
+}
+
+.container {
+    display: flex;
+    height: 250px;
+    margin-left: 770px;
+    margin-top: -300px;
+    margin-bottom: 40px;
+}
+
+.container1 {
+    display: flex;
+    height: 250px;
+    margin-top: -200px;
+    margin-left: 100px;
+    margin-bottom: 40px;
+}
+
+.choose {
+    color: white;
+    text-align: center;
+    font-family: myFont1;
+    font-size: 60px;
+    margin-top: -50px;
+}
+
+.boostb {
+
+    text-decoration: none;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.699);
+    background-color: rgb(83, 83, 187);
+    font-family: myFont1;
+    padding: 6px;
+    border-radius: 6px;
+    font-size: 20px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.boostb:hover {
+
+    background-color: rgb(133, 95, 221);
+}
+
+.divend {
+
+    font-family: myFont1;
+    font-weight: 100;
+    font-size: 17px;
+    margin: auto;
+    padding: 10px;
+    background-color: rgb(22, 22, 22);
+    text-align: center;
+}
+
+.glitchout {
+
+    transition: 0.3s ease-in-out;
+    color: rgb(157, 159, 182);
+}
+
+.glitchout:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.line {
+
+    background-image: linear-gradient(to right, rgb(48, 34, 235) , rgb(180, 50, 231));
+}
+
+.get {
+
+    border: 1px solid white;
+    border-radius: 8px;
+    font-size: 18px;
+    font-family: myFont1;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient( rgb(136, 129, 230) , rgb(192, 102, 228));
+    padding: 7px;
+    margin: auto;
+    display: inline-flex; 
+    align-items: center; 
+    text-align: center;
+    margin-top: 20px;
+    
+}
+
+
+.container3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boost {
+    background-color: rgb(22, 22, 22);
+    height: 650px;
+    width: 1000px;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 20px;
+    font-family: myFont1;
+    color: white;
+}
+
+.button {
+
+    border-width:1px;
+    border-style:solid;
+    border-color:rgb(207, 207, 207, 0.5);
+    background-color: white;
+    border-radius: 6px;
+    margin-left: 2px;
+    padding: 5px;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+    font-size: 17px;
+    font-family: myFont1;
+  }
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    margin-top: 10px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px; 
+    bottom: 2px; 
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(20px); 
+    -ms-transform: translateX(20px); 
+    transform: translateX(20px); 
+}
+
+.slider.round {
+    border-radius: 20px; 
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.blue {
+
+    color:#2196F3;
+}
+
+#priceButton {
+
+    width:120px;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 800px;
+    margin-top: 100px;
+    font-family: myFont1;
+    font-size: 18px;
+    font-weight: 400;
+    transition: background-color 0.3s ease-in-out;
+    border: 1px solid black;
+}
+
+#priceButton:hover {
+
+    background-color: #b0bae6;
+    cursor: pointer;
+}
+
+
+
+
+

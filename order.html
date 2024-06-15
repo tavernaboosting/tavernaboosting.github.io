@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Order Details</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+
+        @font-face {
+    font-family: myFont1;
+    src: url(fonts/ovb.ttf);
+    }
+
+        @font-face {
+    font-family: myFont2;
+    src: url(fonts/Poppins-Black.ttf);
+    }
+
+        body {
+            background-color: #2E2F35;
+        }
+        .order-container {
+            color: white;
+            text-align: center;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.356);
+            background-color: rgb(22,22,22);
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+        }
+        .order-details {
+            margin-bottom: 20px;
+        }
+
+        #discordb {
+
+        transition: background-color 0.3s ease-in-out;
+        margin-top: 12px;
+        font-size: 17px; padding:
+        9px; font-family: myFont1;
+        font-weight: 500; border:
+        1px solid black;
+        border-radius: 5px;
+        background-color: rgb(92, 92, 228); 
+        color: white;
+        cursor:pointer;
+        }
+
+        #discordb:hover {
+
+        background-color: #5252a8;
+        cursor: pointer;
+        }
+
+        #goback {
+
+            transition: background-color 0.3s ease-in-out;
+            font-size: 17px;
+            padding: 9px;
+            font-family: myFont1;
+            font-weight: 500;
+            border: 1px solid black;
+            border-radius: 5px;
+            cursor:
+            pointer;
+
+        }
+
+        #goback:hover {
+
+            background-color: rgb(175, 175, 175);
+        }
+
+
+        .navbar a {
+
+color: white;
+font-weight: 100;
+text-decoration: none;
+margin-left: 25px;
+-webkit-transition: color 0.3s ease-out;
+-moz-transition: color 0.3s ease-out;
+-o-transition: color 0.3s ease-out;
+transition: color 0.3s ease-out;
+user-select: none;
+font-family: myFont1;
+font-weight: 300;
+}
+
+.navbar a:hover {
+
+
+color: rgb(92, 102, 177);
+cursor: pointer
+
+}
+
+
+.logo {
+
+font-size: 20px;
+color:white;
+text-decoration: none;
+font-weight: 700;
+font-family: myFont1;
+background: -webkit-linear-gradient(#5271ff, #da4dda);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+position: sticky;
+
+}
+
+.header {
+justify-content: space-between;
+display: flex;
+font-family: myFont3;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+padding: 20px 100px;
+align-items: center;
+z-index: 100;
+background-color: rgb(37, 37, 37);
+}
+
+* {
+
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+
+}
+body {
+    overflow: hidden;
+}
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo">Taverna</a>
+        <nav class="navbar">
+            <a class="j1" href="./index.html">Home</a>
+            <a class="j2" href="./boosting.html">Boosting</a>
+            <a class="j3" href="https://www.twitch.tv/franktheceo">Twitch</a>
+            <a class="j4" href="https://discord.gg/6qUg4tDJTc">Join Our Discord</a>
+        </nav>
+    </header>
+
+    <div style="margin-top: 90px; border-radius: 15px;" class="order-container">
+        <h1 style="font-family: myFont2;">Order Details</h1><br>
+        <div style="font-family: myFont1;" class="order-details" id="orderDetails"></div>
+        <button id="goback" onclick="window.history.back()">Go Back</button>
+        <a href="https://discord.gg/6qUg4tDJTc" target="_blank"><div style="align-items: center;"><button id="discordb">Join our Discord For Payment</button></div></a>
+    </div>
+
+    <script>
+        function getQueryParams() {
+            var params = {};
+            var queryString = window.location.search.slice(1);
+            var parts = queryString.split('&');
+
+            for (var i = 0; i < parts.length; i++) {
+                var keyValuePair = parts[i].split('=');
+                var key = keyValuePair[0];
+                var value = keyValuePair[1];
+                params[key] = decodeURIComponent(value);
+            }
+
+            return params;
+        }
+
+        window.onload = function() {
+            var params = getQueryParams();
+            var orderDetailsDiv = document.getElementById("orderDetails");
+
+            var orderDetailsHtml = `
+                <p>Order ID: ${params.orderId}</p><br>
+                <p>Region: ${params.region}</p><br>
+                <p>Current Rank: ${params.currentRank} ${params.currentDiv}</p><br>
+                <p>Desired Rank: ${params.desiredRank} ${params.desiredDiv}</p><br>
+                <p>Priority: ${params.priority}</p><br>
+                <p>Champions Selection: ${params.champions}</p><br>
+                <p>Role Selection: ${params.role}</p><br>
+                <p>Offline Mode: ${params.offline}</p><br>
+                <p>Flash Key Change: ${params.flash}</p>
+            `;
+
+            orderDetailsDiv.innerHTML = orderDetailsHtml;
+        }
+    </script>
+
+</body>
+</html>
